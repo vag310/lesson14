@@ -309,10 +309,6 @@ template {
   margin: auto;
   border: 1px solid red; }
 
-.block {
-  -webkit-animation: show 2s ease 2s infinite;
-  animation: show 2s ease 2s infinite; }
-
 .header {
   background-color: #131313;
   padding: 24px 0; }
@@ -347,6 +343,20 @@ template {
     background-color: #E3B873;
     color: #ffffff; }
 
+@font-face {
+  font-family: 'Futura Book';
+  src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
+@font-face {
+  font-family: 'Futura Demi';
+  src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
 body {
-  font-family: sans-serif;
+  font-family: "Futura Book", sans-serif;
   font-size: 14px; }
