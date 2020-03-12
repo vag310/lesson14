@@ -641,7 +641,11 @@ body {
   z-index: 199;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  visibility: hidden; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
