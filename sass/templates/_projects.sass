@@ -1,0 +1,43 @@
+.swiper-wrapper
+    margin-bottom: 50px
+    
+.swiper
+    &-slide
+        display: flex
+        flex-wrap: wrap
+        flex-shrink: 0
+        &__text
+            flex-basis: 50%
+            margin-bottom: 50px
+        &__heading
+            color: $primary
+            font-size: 1.85rem
+            line-height: 1.78rem
+            font-family: Yeseva One
+            text-transform: uppercase
+            margin-bottom: 9px
+    &-pagination
+        &-bullets
+            width: auto !important
+            bottom: 0 !important
+        &-bullet
+            background-color: rgba($light, 0.5) !important
+            &-active
+               background-color: $light !important
+    &-button
+        &-prev, &-next
+            bottom: 0 !important
+            top: auto !important
+            background: url('../img/arrow-prev.svg') no-repeat center
+            background-size: 42px
+            width: 42px !important
+            height: 14px !important
+            &::after
+                display: none
+
+@media screen and ( max-width: 760px )
+    .row
+        flex-direction: column
+    .col-50
+        width: 100%
+        margin-bottom: 30px

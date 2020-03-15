@@ -8,12 +8,37 @@ body
     font-family: "Futura Book", sans-serif
     font-size: 1rem
 
+p 
+   
+
 .section
     padding: 0 5% 50px 5%
+    &--dark
+        background-color: $dark
+        color: $light
     &-title
         text-align: center
         text-transform: uppercase
         font-family: 'Yeseva One', cursive
+        &__word
+                display: flex
+                align-items: center
+                &::after
+                    content: ''
+                    width: 90px
+                    height: 1px
+                    background-color: $primary    
+                    margin-left: 10px    
+        &__text
+            text-align: left
+            font-size: 1.28rem
+            line-height: 2.07rem
+            max-width: 31.57rem
+            font-family: FuturaBookC
+            font-style: normal
+            font-weight: normal
+            text-transform: none
+
         &__image
             &::after, &::before
                 display: inline-block
@@ -23,4 +48,9 @@ body
                 height: 2px
                 background-color: $primary
                 margin: 0 10px
+        &__heading
+            &--left
+                text-align: left
+            &--primary
+                color: $primary
 

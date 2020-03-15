@@ -307,8 +307,19 @@ template {
 .container {
   border: 1px solid red; }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; }
+
+.col-30 {
+  flex-basis: 30%; }
+
+.col-50 {
+  width: 50%; }
+
 .header {
-  background-color: #131313;
+  background-color: #252525;
   padding: 24px 5%;
   position: fixed;
   left: 0;
@@ -411,9 +422,53 @@ template {
   font-style: normal;
   font-display: wrap; }
 
+.swiper-wrapper {
+  margin-bottom: 50px; }
+
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0; }
+  .swiper-slide__text {
+    flex-basis: 50%;
+    margin-bottom: 50px; }
+  .swiper-slide__heading {
+    color: #E3B873;
+    font-size: 1.85rem;
+    line-height: 1.78rem;
+    font-family: Yeseva One;
+    text-transform: uppercase;
+    margin-bottom: 9px; }
+
+.swiper-pagination-bullets {
+  width: auto !important;
+  bottom: 0 !important; }
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5) !important; }
+  .swiper-pagination-bullet-active {
+    background-color: #ffffff !important; }
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0 !important;
+  top: auto !important;
+  background: url("../img/arrow-prev.svg") no-repeat center;
+  background-size: 42px;
+  width: 42px !important;
+  height: 14px !important; }
+  .swiper-button-prev::after, .swiper-button-next::after {
+    display: none; }
+
+@media screen and (max-width: 760px) {
+  .row {
+    flex-direction: column; }
+  .col-50 {
+    width: 100%;
+    margin-bottom: 30px; } }
+
 .hero {
   position: relative;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  background: #252525 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff;
   padding: 100px 5% 0 5%;
@@ -426,9 +481,18 @@ template {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(19, 19, 19, 0.7);
+    background-color: rgba(37, 37, 37, 0.7);
     width: 100%;
     height: 100%; }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background-color: #252525; }
   .hero__content {
     position: relative;
     max-width: 47.85rem;
@@ -448,10 +512,11 @@ template {
     bottom: 0;
     min-width: 247px;
     min-height: 97px;
-    background-color: #131313;
+    background-color: #252525;
     color: #ffffff;
     text-transform: uppercase;
-    text-decoration: none; }
+    text-decoration: none;
+    z-index: 3; }
     .hero__scroll-down::after {
       content: '';
       width: 30px;
@@ -467,7 +532,7 @@ template {
     margin-right: 20px; }
 
 .instagram {
-  background-color: #131313;
+  background-color: #252525;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -506,10 +571,31 @@ body {
 
 .section {
   padding: 0 5% 50px 5%; }
+  .section--dark {
+    background-color: #252525;
+    color: #ffffff; }
   .section-title {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive; }
+    .section-title__word {
+      display: flex;
+      align-items: center; }
+      .section-title__word::after {
+        content: '';
+        width: 90px;
+        height: 1px;
+        background-color: #E3B873;
+        margin-left: 10px; }
+    .section-title__text {
+      text-align: left;
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 31.57rem;
+      font-family: FuturaBookC;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none; }
     .section-title__image::after, .section-title__image::before {
       display: inline-block;
       vertical-align: text-top;
@@ -518,6 +604,10 @@ body {
       height: 2px;
       background-color: #E3B873;
       margin: 0 10px; }
+    .section-title__heading--left {
+      text-align: left; }
+    .section-title__heading--primary {
+      color: #E3B873; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -637,7 +727,7 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(19, 19, 19, 0.6);
+  background-color: rgba(37, 37, 37, 0.6);
   z-index: 199;
   display: flex;
   justify-content: center;
@@ -649,7 +739,7 @@ body {
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
-    background: #131313 url("../img/bg-lines.svg") no-repeat center;
+    background: #252525 url("../img/bg-lines.svg") no-repeat center;
     padding: 37px 49px 27px 37px;
     color: #ffffff; }
   .modal__close {
