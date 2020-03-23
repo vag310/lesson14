@@ -47,5 +47,29 @@ $(document).ready(function () {
      bullets.css('left', prev.width() + 10)
 
      new WOW().init();
-     
+
+     // Валиадция формы 
+     $(".modal-form").validate({
+        rules: {
+          // simple rule, converted to {required:true}
+          userName: "required",
+          userPhone: "required",
+          // compound rule
+          userEmail: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+            userName: "Имя обязательно",
+            userPhone: "обязательно",
+            userEmail: {
+              required: "Обязательно",
+              email: "Your email address must be in the format of name@domain.com"
+            }
+          }
+      });
+
+      $('[type=tel]').mask('+7 000 000 00 00', {placeholder: "+7 ___ ___ __ __"});
+
 });

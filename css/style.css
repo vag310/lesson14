@@ -399,7 +399,8 @@ template {
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.45rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -407,6 +408,8 @@ template {
     border: 1px solid #E3B873;
     border-radius: 1px;
     margin-right: 0.64rem; }
+  .policy__label--centet {
+    justify-content: center; }
 
 @font-face {
   font-family: 'Futura Book';
@@ -765,14 +768,17 @@ body {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
-    margin-bottom: 3.428rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+  .modal__input-group {
+    margin-bottom: 3.48rem;
+    display: flex;
+    flex-direction: column; }
+  .modal__input:last-of-type {
+    margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2rem; }
   .modal__button {
-    align-self: flex-end; }
+    align-self: flex-end;
+    cursor: pointer; }
 
 .control__section-title {
   margin-bottom: 32px;
@@ -839,3 +845,44 @@ body {
 .video__play {
   position: relative;
   margin: auto; }
+
+.footer {
+  background: #252525 url("../img/footer-bg.jpg") no-repeat center/cover; }
+  .footer__menu {
+    background-color: #181818;
+    padding: 60px 92px; }
+  .footer-wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    padding: 2.5rem;
+    margin-bottom: 3.714rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Yuseva One';
+    margin-bottom: 3.214rem;
+    text-align: center; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding: 0 20px;
+    margin-bottom: 20px; }
+    .footer__input-group--full-width {
+      flex-basis: 100%; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 2rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.785rem; }
+
+.menu--dark {
+  margin-bottom: 100px; }
