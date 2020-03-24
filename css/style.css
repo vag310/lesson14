@@ -883,6 +883,10 @@ body {
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem; }
+  .footer__map {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px; }
 
 .menu--dark {
   margin-bottom: 100px; }
